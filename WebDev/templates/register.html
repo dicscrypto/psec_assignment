@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %} Registration Page {% endblock %}
+
+{% block content %}
+    <h3>Register</h3><hr>
+
+    <div>
+        <p>Username must only be in <b>letters</b>.</p>
+        <p>Password must be at least <b>8 characters</b> and must contain:</p>
+        <p>At least <b>1 uppercase</b>, <b>1 lowercase</b>, <b>1 number</b> and <b>1 special character</b>.</p>
+        <p><b>Leading and Trailing</b> whitespaces for passwords will be <b>removed</b>.</p><hr>
+    </div>
+
+    <form action = "/parse_registration" method = "POST">
+        <table width = '500px' style = "text-align: center">
+            <tr>
+                <td>
+                    <label for = "new_username">New username: </label>
+                </td>
+
+                <td>
+                    <input type = "text" name = "new_username">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for = "new_password">New password: </label>
+                </td>
+
+                <td>
+                    <input type = "password" name = "new_password">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for = "confirm_new_password">Confirm New Password: </label>
+                </td>
+
+                <td>
+                    <input type = "password" name = "confirm_new_password">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan = "2">
+                    <p><button type = "submit">Register</button></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan = "2">
+                    <p><a href = "/">Main Menu</a></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan = "2">
+                    {% if error | length %}
+                        {{ error }}
+                    {% elif success | length %}
+                        {{ success }}
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}
