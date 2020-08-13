@@ -10,10 +10,11 @@ Tuesday,Spaghetti Bolognaise,5.4
 Wednesday,Mee Rebus,4.5
 Wednesday,Asam Laksa,4.9
 Wednesday,Laksa Royale,5.9
-Thursday,Plain Prata,1.5
 Thursday,Egg Prata,2.5
 Thursday,Chicken Murtabak,7.0
 Thursday,Mutton Murtabak,6.5
+Thursday,plain pratas,2.5
+Thursday,rojak,2.5
 Friday,Tom Yam,7.0
 Friday,Nasi Paprik,5.5
 Friday,Nasi Goreng Paprik,7.0
